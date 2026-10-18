@@ -712,7 +712,8 @@ odm/etc/init/init.oplus.sensor.rc
 odm/etc/init/vendor-oplus-hardware-oplusSensor-V1-service.rc
 odm/etc/vintf/manifest/manifest_oplusSensor_aidl.xml
 odm/lib64/liboplus_service.so
-odm/lib64/libsensorbridge.so
+# Pinned to OnePlus 15 (CPH2745_16.0.10.601(EX01)): superset needed by the OP15 camera.oemlayer.v2 HAL
+odm/lib64/libsensorbridge.so|7bedc714c10582eed3e1bc890a1acc22ba32d4a7
 vendor/bin/hw/vendor.qti.hardware.sensorscalibrate-service
 vendor/bin/init.qcom.sensors.sh
 vendor/bin/sscrpcd
