@@ -56,7 +56,9 @@ blob_fixups: blob_fixups_user_type = {
         'odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff',
         'odm/lib64/libdisplayfossfeature_nature.so',
         'odm/lib64/libstc_color_feature.so',
+        'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
         'vendor/lib64/hw/libaudioeffecthal.qti.so',
+        'vendor/lib64/libsdmclient.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
     'odm/bin/touchDaemon': blob_fixup()
@@ -106,10 +108,24 @@ blob_fixups: blob_fixups_user_type = {
     (
         'vendor/lib64/libcwb_qcom_aidl.so',
         'vendor/lib64/libhwcsensor.so',
+        'vendor/lib64/libsdmclient.so',
     ): blob_fixup()
         .replace_needed('vendor.qti.hardware.display.config-V11-ndk.so', 'vendor.qti.hardware.display.config-V13-ndk.so'),
-    'vendor/lib64/libqcodec2_core.so': blob_fixup()
+    (
+        'vendor/lib64/libpwirishalwrapper.so',
+        'vendor/lib64/libqcodec2_core.so',
+        'vendor/lib64/libsdmclient.so',
+    ): blob_fixup()
         .replace_needed('android.hardware.graphics.common-V5-ndk.so', 'android.hardware.graphics.common-V7-ndk.so'),
+    'vendor/lib64/libpwirishalwrapper.so': blob_fixup()
+        .replace_needed('android.hardware.graphics.composer3-V3-ndk.so', 'android.hardware.graphics.composer3-V4-ndk.so'),
+    (
+        'vendor/lib64/libdemura_oem_plugin.so',
+        'vendor/lib64/libsdmcore.so',
+    ): blob_fixup()
+        .binary_regex_replace(b'/my_product/vendor/etc/', b'/vendor/etc/oplus_disp/'),
+    'vendor/lib64/libsdmcore.so': blob_fixup()
+        .add_needed('libbase.so'),
     'vendor/usr/keylayout/gpio-keys.kl': blob_fixup()
         .add_line_if_missing('key 735   ASSIST'),
 }  # fmt: skip

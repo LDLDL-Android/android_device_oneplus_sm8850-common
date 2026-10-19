@@ -186,15 +186,16 @@ PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
 # Display
 PRODUCT_PACKAGES += \
-    android.hardware.graphics.mapper@4.0-impl-qti-display \
+    android.hardware.graphics.allocator-V2-ndk.vendor \
+    android.hardware.graphics.composer3-V4-ndk.vendor \
     init.qti.display_boot.rc \
     init.qti.display_boot.sh \
-    libfilefinder \
-    mapper.qti \
-    vendor.qti.hardware.display.allocator-service \
-    vendor.qti.hardware.display.composer-service \
-    vendor.qti.hardware.display.demura-service \
-    vendor.qti.hardware.display.snapalloc-impl
+    vendor.qti.hardware.display.aiqe-V3-ndk.vendor \
+    vendor.qti.hardware.display.composer-service.rc \
+    vendor.qti.hardware.display.composer-service.xml \
+    vendor.qti.hardware.display.composer3-V1-ndk.vendor \
+    vendor.qti.hardware.display.config-V13-ndk.vendor \
+    vendor.qti.hardware.display.demura-V1-ndk.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.touchscreen.multitouch.jazzhand.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.touchscreen.multitouch.jazzhand.xml
