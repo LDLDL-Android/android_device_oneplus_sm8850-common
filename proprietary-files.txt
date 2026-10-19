@@ -1,5 +1,7 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 15R (CPH2767_16.0.10.600(EX01)).
+## are from OnePlus 15 (CPH2745_16.0.10.601(EX01)), except the audio and
+## display stacks, which stay pinned to OnePlus 15R (CPH2767_16.0.10.600(EX01))
+## to match the source-built PAL/AGM and SDM/composer.
 
 # ACDBs
 vendor/etc/acdbdata/haptics_data/tuning_data/haptics_rx_tuning_0_cdp.bin
@@ -9,7 +11,7 @@ vendor/etc/acdbdata/haptics_data/tuning_data/haptics_vi_tuning_0_cdp.bin
 vendor/etc/acdbdata/haptics_data/tuning_data/haptics_vi_tuning_0_mtp.bin
 vendor/etc/acdbdata/haptics_data/tuning_data/haptics_vi_tuning_0_qrd.bin
 vendor/etc/acdbdata/nn_vad_models/fai__3.0.0_0.0__eai_5.6.0_enpuv6.pmd
-vendor/etc/acdbdata/wnr_models/wind_filter__1.0__48k__2ch__16b__eai_5.5.eai
+vendor/etc/acdbdata/wnr_models/wind_filter__1.0__48k__2ch__16b__eai_5.5.eai|d58f6b99066c48224e82fa7e010f999d8e3ec8cf
 
 # ADSP
 vendor/bin/adsprpcd
@@ -30,60 +32,60 @@ vendor/lib/rfsa/adsp/nearby.napp_header
 vendor/lib/rfsa/adsp/nearby.so
 
 # Audio
-vendor/etc/models/acd/conv_detection.eai
-vendor/etc/models/acd/environment.eai
-vendor/etc/models/acd/event.eai
-vendor/etc/models/acd/music.eai
-vendor/etc/models/acd/speech.eai
-vendor/etc/models/mma/nvd_enpu_off.bin
-vendor/etc/models/mma/nvd_enpu_on.bin
-vendor/etc/models/mma/vad_enpu_off.bin
-vendor/etc/models/mma/vad_enpu_on.bin
-vendor/etc/vintf/manifest/Manifest_IListenSoundModel.xml
-vendor/etc/vintf/manifest/qasr_vintf.xml
-vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_DEPS;REQUIRED=manifest_audiocorehal_default.xml
-vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_DEPS
-vendor/lib64/hw/libaudioeffecthal.qti.so;DISABLE_DEPS;REQUIRED=audioeffectservice_qti.xml
-vendor/lib64/libAlacSwDec.so
-vendor/lib64/libApeSwDec.so
-vendor/lib64/libEvrcSwCodec.so
-vendor/lib64/libFlacSwDec.so
-vendor/lib64/libPeripheralStateUtils.so
-vendor/lib64/libadm.so
-vendor/lib64/libar-pal.so
-vendor/lib64/libarmemlog.so
-vendor/lib64/libaudio_log_utils.so
-vendor/lib64/libaudiofeaturestats.so
-vendor/lib64/libaudioserviceexampleimpl.so;DISABLE_DEPS
-vendor/lib64/libcapiv2svacnnvendor.so
-vendor/lib64/libcapiv2svarnnvendor.so
-vendor/lib64/libcapiv2udk7vendor.so
-vendor/lib64/libcapiv2uvvendor.so
-vendor/lib64/libdev_bt.so
-vendor/lib64/libdev_speaker.so
-vendor/lib64/libdsd2pcm.so
-vendor/lib64/libeai_fixed.so
-vendor/lib64/libeai_float.so
-vendor/lib64/liblistensoundmodel2vendor.so
-vendor/lib64/liblistensoundmodelaidl.so
-vendor/lib64/libmcs.so
-vendor/lib64/libopluspal.so
-vendor/lib64/libpal_net_if.so
-vendor/lib64/libqasr.so
-vendor/lib64/libqtigefar.so;DISABLE_DEPS
-vendor/lib64/libsession_ar.so
-vendor/lib64/libsession_compress.so
-vendor/lib64/libsession_compress_config.so
-vendor/lib64/libsession_pcm.so
-vendor/lib64/libsession_pcm_config.so
-vendor/lib64/libsession_voice.so
-vendor/lib64/libsession_voice_config.so
-vendor/lib64/libstream_compress.so
-vendor/lib64/libstream_pcm.so
-vendor/lib64/libtensorflowlite_c_qcom.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so
-vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V2-ndk.so
-vendor/lib64/vendor.qti.hardware.qasr-V3-ndk.so
+vendor/etc/models/acd/conv_detection.eai|1bf1a4d0bc22a656e472fc48754173069b0bfa91
+vendor/etc/models/acd/environment.eai|7c2c6b31511afd1054e0b71b0ff5ba8549067624
+vendor/etc/models/acd/event.eai|8637c4397c576035cf1e31010ada93f869858f39
+vendor/etc/models/acd/music.eai|504f4cf2ab6a258de22757be2c523860f9687d04
+vendor/etc/models/acd/speech.eai|ba2dc1ba0f4e269e77c4047196c1b1005fecb198
+vendor/etc/models/mma/nvd_enpu_off.bin|e1ab897e37ac4a83cd3c95d0f0762c414e996fc6
+vendor/etc/models/mma/nvd_enpu_on.bin|9fb65650eb327c0b5f65c3f5c303a5934fae2bf3
+vendor/etc/models/mma/vad_enpu_off.bin|d5b7b4b0e2b75aa83144d3bade4c20150707524d
+vendor/etc/models/mma/vad_enpu_on.bin|1352eb0dc58b0f1bdee44d339e39dcc5856ef5d0
+vendor/etc/vintf/manifest/Manifest_IListenSoundModel.xml|6d18b45696122cc62a750a139001b6bb05dfdb02
+vendor/etc/vintf/manifest/qasr_vintf.xml|c7c183d5deadec39de1f20a64bef630bbbbfe458
+vendor/lib64/hw/libaudiocorehal.default.so;DISABLE_DEPS;REQUIRED=manifest_audiocorehal_default.xml|03a88f918aff7959b7fdaf75cf0c1c7d44eae8e7
+vendor/lib64/hw/libaudiocorehal.qti.so;DISABLE_DEPS|2c17c1c9cba1cbff04dadf03d799d4db11455715
+vendor/lib64/hw/libaudioeffecthal.qti.so;DISABLE_DEPS;REQUIRED=audioeffectservice_qti.xml|b48509b8d7b3cc593502815df3eab80adec38b24|b48509b8d7b3cc593502815df3eab80adec38b24
+vendor/lib64/libAlacSwDec.so|321ff554f61e93f19ad08b41d0e5a505449323e5
+vendor/lib64/libApeSwDec.so|eddd17133dc6d0239239f50a3a2ecb8874491eb1
+vendor/lib64/libEvrcSwCodec.so|cbe13ea1feb224787cffc34d7363a3ddfb91c5c0
+vendor/lib64/libFlacSwDec.so|7e5879541834a3cea9645bbdfeeb1d6aeff14c27
+vendor/lib64/libPeripheralStateUtils.so|06698ba4b80927d28aa8560aa21c9301c4430982
+vendor/lib64/libadm.so|2789c42b21462a53164e2c3310ab004ad264188b
+vendor/lib64/libar-pal.so|a296c25d3fb09ca006f8ef5927d84230377c0ef2
+vendor/lib64/libarmemlog.so|3444941c865e0c679a0c4f29cfd812eac4dbfff6
+vendor/lib64/libaudio_log_utils.so|8d862978fdcb1a33908ac5512e1e33a0637de506
+vendor/lib64/libaudiofeaturestats.so|eb8b38e894269a940b20694f1ec3eb9739d30bf0
+vendor/lib64/libaudioserviceexampleimpl.so;DISABLE_DEPS|442e5c9ce009ad1b9b8bd3c23888a78af21aaf86|442e5c9ce009ad1b9b8bd3c23888a78af21aaf86
+vendor/lib64/libcapiv2svacnnvendor.so|cc5fd5111d54eab42377a92d1ac05b8e06492689
+vendor/lib64/libcapiv2svarnnvendor.so|46a1a7ada500f729a3e34e7496073f988d79e8a8
+vendor/lib64/libcapiv2udk7vendor.so|25d06a1d27428c96505d81ab51d95d31495c8e83
+vendor/lib64/libcapiv2uvvendor.so|d8b08d31cd6d1c63cc58993edee8f9f11bb6697e
+vendor/lib64/libdev_bt.so|cb510b0d8ad03a4faf444781fad47f3e27f66796
+vendor/lib64/libdev_speaker.so|bf7da6eb3150b2ca30393c66fd8dffa21f827bf0
+vendor/lib64/libdsd2pcm.so|134e135b231d43462b2123c43f7bd67cbff9f280
+vendor/lib64/libeai_fixed.so|cdee57d6c3845a10f2bb5e30c044b4357e66603a
+vendor/lib64/libeai_float.so|dca4e1facbaf657c0545965a0de87197e9ddcda8
+vendor/lib64/liblistensoundmodel2vendor.so|5962d9d97fdf17ade303591b53226cf6b4a119ae
+vendor/lib64/liblistensoundmodelaidl.so|4f2d453f6a08bd2a7795e7db2e3e757d0b175542
+vendor/lib64/libmcs.so|4b6180804c10f21889fa76764f2d5a62f1e37efe
+vendor/lib64/libopluspal.so|acf38abe70797f82785d6a03baa5e14ac2c074ef
+vendor/lib64/libpal_net_if.so|00ad2ea3089f29ea15fa8091a6c472f5096123fe
+vendor/lib64/libqasr.so|3ae6c69dc4e0eaba6cf0b3de07b25b0bbe3775ca
+vendor/lib64/libqtigefar.so;DISABLE_DEPS|e465a0a98ea8492cd654ee5461d6caca19215c50
+vendor/lib64/libsession_ar.so|b6c2150da536511bcf15aa5c59936c1adef88097
+vendor/lib64/libsession_compress.so|36e33e52f1d853f450f1113758f4ab0a4927e5f8
+vendor/lib64/libsession_compress_config.so|755c37e8b7ef0b9f2e35ed14b719fc75605d7133
+vendor/lib64/libsession_pcm.so|b6893b270edb7743c512456b3d3a477a42a9f5d7
+vendor/lib64/libsession_pcm_config.so|0b11cfa3abf4dd0cab4017ca7526280d4caa8670
+vendor/lib64/libsession_voice.so|0074213f2a6adadc44238c95dffcf95c624d5133
+vendor/lib64/libsession_voice_config.so|543b3d009e51af906e4c8b4087755526270b1022
+vendor/lib64/libstream_compress.so|7b925374e1f2e6f1e4fcf9ddb224330012a2b650
+vendor/lib64/libstream_pcm.so|0b8f3726d948aae0023372c77c92b520cba1efa7
+vendor/lib64/libtensorflowlite_c_qcom.so|7a090678dff0aa33b2c1f183306c1ebe7214246d
+vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V1-ndk.so|bed5ec86eeac78d0a00579f0792d97dfd5db04c8
+vendor/lib64/vendor.qti.hardware.ListenSoundModelAidl-V2-ndk.so|46727ee201910675097c1f12b04dbcc0a31157f1
+vendor/lib64/vendor.qti.hardware.qasr-V3-ndk.so|5b21b6f3b1f7d912ef0b351874688ea3f94fecb0
 
 # Bluetooth
 vendor/bin/hw/android.hardware.bluetooth@aidl-service-qti
@@ -110,8 +112,8 @@ vendor/lib64/hw/android.hardware.bluetooth.audio_sw.so;DISABLE_DEPS
 vendor/lib64/hw/android.hardware.bluetooth.lmp_event-impl-qti.so
 vendor/lib64/hw/android.hardware.bluetooth.ranging@aidl-impl-qti.so
 vendor/lib64/hw/audio.bluetooth_qti.default.so
+vendor/lib64/hw/libbcs.so
 vendor/lib64/hw/mbedtls_qti.so
-vendor/lib64/hw/qc_bcs_lib.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth.btavsprovider-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth.finder-impl-qti.so
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@aidl-impl.so
@@ -183,99 +185,99 @@ vendor/lib64/libdiag.so
 vendor/lib64/vendor.qti.diaghal-V1-ndk.so;MODULE_SUFFIX=_vendor
 
 # Display (Features)
-odm/etc/init/hw/init.oplus.display.rc
-vendor/bin/feature_enabler_client
-vendor/etc/init/feature_enabler_client.rc
-vendor/etc/058eb5c6-666d-4d06-b996-522410412877_2026-01-12_platform_RSA_license_75992976805022424249809535731023317112.pfm
-vendor/etc/2025-05-09_platform_RSA_SM8850-KAANAPALI_license_44de0851-4860-4b27-93ce-888ddb6d846a.pfm
-vendor/etc/2025-08-19_platform_RSA_SM8850-KAANAPALI_license_041c7d27-2a09-4856-a151-bc97c58a32f7.pfm
-vendor/etc/2025-08-19_platform_RSA_SM8850-KAANAPALI_license_c5211d39-e3d3-46c8-9dd0-3775810af82f.pfm
-vendor/etc/2025-09-23_platform_RSA_SM8845_license_5114256b-d4ce-4cf4-8c4b-40f4c70ce6a5.pfm
+odm/etc/init/hw/init.oplus.display.rc|707cc32e0ff2d161af4818bd9acfa1c6d4f46543
+vendor/bin/feature_enabler_client|cf50c02f5682f0dd0be50026c6b5e4fbbfb338ec
+vendor/etc/init/feature_enabler_client.rc|6aeee1f0dc59f7e2841b8613e52a1ff81e0a9cae
+vendor/etc/058eb5c6-666d-4d06-b996-522410412877_2026-01-12_platform_RSA_license_75992976805022424249809535731023317112.pfm|17ae26d8eb57430fb09d79c1d57c0ca78f0f856d
+vendor/etc/2025-05-09_platform_RSA_SM8850-KAANAPALI_license_44de0851-4860-4b27-93ce-888ddb6d846a.pfm|5a9c525a9fb9b0ba7c9d7b49ea32f2a039c5957f
+vendor/etc/2025-08-19_platform_RSA_SM8850-KAANAPALI_license_041c7d27-2a09-4856-a151-bc97c58a32f7.pfm|eaa11a46924074674bc0409e5994248a9ec8a69b
+vendor/etc/2025-08-19_platform_RSA_SM8850-KAANAPALI_license_c5211d39-e3d3-46c8-9dd0-3775810af82f.pfm|3314d09ffdc9cf2267fa856fcfc2fed68a28aebc
+vendor/etc/2025-09-23_platform_RSA_SM8845_license_5114256b-d4ce-4cf4-8c4b-40f4c70ce6a5.pfm|7fec80b751e65cfb9d03a859f6b62eedfca2a519
 
 # Display (HDR)
-vendor/lib64/libhdr_tm.so
-vendor/lib64/libhdrdynamic.so
-vendor/lib64/libhdrdynamicootf.so
-vendor/lib64/libhdrvivid.so
+vendor/lib64/libhdr_tm.so|0ab6e29df076ca62b3795c692bd9a83daeb72e04
+vendor/lib64/libhdrdynamic.so|11f8f863bb96d554e3a34af774c33dd6cb690aeb
+vendor/lib64/libhdrdynamicootf.so|f3522ade93c714691b7db1e610c22f2835855967
+vendor/lib64/libhdrvivid.so|2ba380dff70828542bed383095687f1cafcb0663
 
 # Display (HWC)
-vendor/bin/qdcmss
-vendor/etc/init/qdcmss.rc
-vendor/etc/snapdragon_color_libs_config.xml
-vendor/lib64/libap_uir_dimming.so
-vendor/lib64/libdemura_oem_plugin.so
-vendor/lib64/libdmap_consent_sdk.so
-vendor/lib64/libdpp_manager.so
-vendor/lib64/libdpps.so
-vendor/lib64/libgame_enhance.so
-vendor/lib64/libhwcsensor.so
-vendor/lib64/libmemutils.so
-vendor/lib64/libqdcm-algo.so
-vendor/lib64/libqdcm-json-mode-parser.so
-vendor/lib64/libqdcm-mode-parser.so
-vendor/lib64/libsnapdragoncolor-manager.so
-vendor/lib64/libsnapdragoncolor-qdcm.so
-vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so
+vendor/bin/qdcmss|3f42fcc0d35929706d1be08f06a98203e8b65a6c
+vendor/etc/init/qdcmss.rc|53d78d686678c4f923a9ec4ace7d4d3575b13788
+vendor/etc/snapdragon_color_libs_config.xml|c6bd180e2f681cb04bdc087422c8c0628075b447
+vendor/lib64/libap_uir_dimming.so|d7dff9a7e4189e79295db91a4916680bea127854
+vendor/lib64/libdemura_oem_plugin.so|0b7cb1e7bb7d0da8e5285f864630ffb9835229ff
+vendor/lib64/libdmap_consent_sdk.so|053d1705758892a9af1b1bcb20352643b0a19e91
+vendor/lib64/libdpp_manager.so|4e6d3ef66f30c3e04aba90e14049890dfe95a3f8
+vendor/lib64/libdpps.so|f87b0bf7f31eb73e35c0e7f27ccc2600b8159bb0
+vendor/lib64/libgame_enhance.so|5dd0ccb77d088f095b54cefe4f5f7cf4dde35495
+vendor/lib64/libhwcsensor.so|837bc8dafb1de9bf02910e1a67434ac159a3c9ba|837bc8dafb1de9bf02910e1a67434ac159a3c9ba
+vendor/lib64/libmemutils.so|fb3e41a255d7ee87ac7714545498404b48a10014
+vendor/lib64/libqdcm-algo.so|f0d885a31e167b1bb91c7681968933fe386642f3
+vendor/lib64/libqdcm-json-mode-parser.so|0e2f4377fb036a93976bf72174fcf5ac50da21d8
+vendor/lib64/libqdcm-mode-parser.so|3c7adfcdf3cecebc63d67b21c7f06608c9b14fb9
+vendor/lib64/libsnapdragoncolor-manager.so|de515fe3ad4fb6def06ba06c3fe19e58784e1723
+vendor/lib64/libsnapdragoncolor-qdcm.so|2d13c2ed6b4b8dd5ab3a45910cbdc25318393922
+vendor/lib64/vendor.qti.hardware.qdutils_disp@1.0.so|13db3bda92bdd5a00bbb1187f057caef57ab32b8
 
 # Display (SDM)
-vendor/etc/display/DPU1010.xml
-vendor/etc/display/DPU10__.xml
-vendor/etc/display/DPU11__.xml
-vendor/etc/display/DPU1230.xml
-vendor/etc/display/DPU1240.xml
-vendor/etc/display/DPU12__.xml
-vendor/etc/display/DPU1310.xml
-vendor/etc/display/DPU13__.xml
-vendor/etc/display/DPU880.xml
-vendor/etc/display/DPU970.xml
-vendor/etc/display/DPU980.xml
-vendor/etc/display/DPU9__.xml
-vendor/etc/display/advanced_sf_offsets.xml
-vendor/etc/display/camera_alignments.json
-vendor/etc/display/cpu_alignments.json
-vendor/etc/display/default_alignments.json
-vendor/etc/display/display_alignments.json
-vendor/etc/display/formats.json
-vendor/etc/display/graphics_alignments.json
-vendor/etc/display/pipe_config_DPU11__.xml
-vendor/etc/display/thermallevel_to_fps.xml
-vendor/etc/display/ubwc_alignments.json
-vendor/etc/display/video_alignments.json
-vendor/etc/display/vtdr6130_amoled_cmd_mode_dsi_visionox_panel_with_DSC.json
-vendor/etc/clstc_config_library.xml
-vendor/lib64/libbacklight-calib.so
-vendor/lib64/libclstc_algorithm_adapter.so
-vendor/lib64/libclstc_gcp_adapter.so
-vendor/lib64/libclstc_tm.so
-vendor/lib64/libdigital-dimming.so
-vendor/lib64/libdisplayqos.so
-vendor/lib64/libdisplayskuutils.so
-vendor/lib64/libfeutils.so
-vendor/lib64/libhdr_als_adapter.so
-vendor/lib64/libhdr_backlight_adapter.so
-vendor/lib64/libintervmipc.so
-vendor/lib64/libqrtrclient.so
-vendor/lib64/libqseed3.so
-vendor/lib64/librcmask.so
-vendor/lib64/libsdm-brightnessaware-parser.so
-vendor/lib64/libsdm-color.so
-vendor/lib64/libsdm-colormgr-algo.so
-vendor/lib64/libsdm-disp-vndapis.so
-vendor/lib64/libsdmextension.so
-vendor/lib64/libtestutils.so
-vendor/lib64/libtinyxml2_1.so
-vendor/lib64/libvmfilexfer.so
+vendor/etc/display/DPU1010.xml|71c1760aac43506bd38e7421ff6b61def5e7a0d8
+vendor/etc/display/DPU10__.xml|0f19bb3e57483d45a603e13b0211ea3e2cac6a1b
+vendor/etc/display/DPU11__.xml|240de6b565c912ab42dc92ab9e2f4ee376fc081c
+vendor/etc/display/DPU1230.xml|67a2344b41d9d9183ad45b364b4f79d254d261bc
+vendor/etc/display/DPU1240.xml|1c64c897042205abd4b1fed2fb8e99dbafb40210
+vendor/etc/display/DPU12__.xml|9e08404b47ac5b8f32b2b9eef50a70cd92c24b1f
+vendor/etc/display/DPU1310.xml|792af234f221ff49c7d3b0c4a92062b7cc4b04ea
+vendor/etc/display/DPU13__.xml|792af234f221ff49c7d3b0c4a92062b7cc4b04ea
+vendor/etc/display/DPU880.xml|c4a0893acbe2a8854e9ff174de50a0a61c3f830b
+vendor/etc/display/DPU970.xml|3531cd560ca45e8ab305558a3b8cf5a48788eab4
+vendor/etc/display/DPU980.xml|5395ab5188182df9bb83c7c7b03fd9717085e52a
+vendor/etc/display/DPU9__.xml|691b8c27d488efb486520ecda6a7b52c1d4fa582
+vendor/etc/display/advanced_sf_offsets.xml|846bacb918f93b2013223c1a9ac2d1af68802764
+vendor/etc/display/camera_alignments.json|c5b164733f21a4a2a1647d605f345a967752f49c
+vendor/etc/display/cpu_alignments.json|ac32b9b0164433d7ad906f94d2c89ef9e3dd7b76
+vendor/etc/display/default_alignments.json|c736c1c75056c2ed2e11e1fafc6b9ab118380c12
+vendor/etc/display/display_alignments.json|14df40e617b4784436f014a0ef9192fb799d9222
+vendor/etc/display/formats.json|6652e4eb2600b71980d8f423b01c475dd133e7e9
+vendor/etc/display/graphics_alignments.json|c6caa161177a60e2e0d06331cc94d37ddf52c676
+vendor/etc/display/pipe_config_DPU11__.xml|31da247194d95a9880fe5ea32e58467f4ff6e121
+vendor/etc/display/thermallevel_to_fps.xml|ddc5c359239cd7f4302da4f93aa509a453e2e98e
+vendor/etc/display/ubwc_alignments.json|4d1c7728c19bdcc88d7563b62b819699b347f4b6
+vendor/etc/display/video_alignments.json|0c828517d897309a243403c3ab2b3634e3ee0d83
+vendor/etc/display/vtdr6130_amoled_cmd_mode_dsi_visionox_panel_with_DSC.json|60dafcee8952cb8b511467196d10e17ac14d3d9b
+vendor/etc/clstc_config_library.xml|68fbd67ac6d895fc489a58328397cbbcdb25c4bb
+vendor/lib64/libbacklight-calib.so|cccd870e430dbb77d9445cd5eede8cb0fc0055e0
+vendor/lib64/libclstc_algorithm_adapter.so|c117275d1eccdd500ee92bedc8e76976db3c96d6
+vendor/lib64/libclstc_gcp_adapter.so|8d2420382f38d2153015ad4f76ef80437cdae8fe
+vendor/lib64/libclstc_tm.so|649cc017e802a4c20664924be4dbc0b0407152db
+vendor/lib64/libdigital-dimming.so|c641e4d8d141eeab3a32794616fd71d7812d31c5
+vendor/lib64/libdisplayqos.so|b5401a67c0ce4689f25b7b8a10178ab8c8b0b0ab
+vendor/lib64/libdisplayskuutils.so|8ffa6a4708dc05918c9ddb5d360dd1b044a1295a
+vendor/lib64/libfeutils.so|4d0b8a077b07a4c8deaf40a69f7e3d1d8480949d
+vendor/lib64/libhdr_als_adapter.so|f6944429e2c28384be3db75eea66e99b44643fe8
+vendor/lib64/libhdr_backlight_adapter.so|942a03109e61c1d0d4b800cb1f9638d8b0e22e0f
+vendor/lib64/libintervmipc.so|2df0e9628938cbbb7dfe2193250aef98c6da36c4
+vendor/lib64/libqrtrclient.so|576b57a7e8f8acdae1fc111bf7204d24025cca10
+vendor/lib64/libqseed3.so|68e7a7c90080bc33e0f5acf3550e6eaf1ff7ceb2
+vendor/lib64/librcmask.so|7ecb9537fdebcafc22c106b2a78ae867c47253f2
+vendor/lib64/libsdm-brightnessaware-parser.so|52c602dee7f3e2936378ebbf0917642b2abed4b9
+vendor/lib64/libsdm-color.so|e64fd8d05bcd578e17e552cf581d7c0ba96e51bb
+vendor/lib64/libsdm-colormgr-algo.so|a6123541a0ac493473aa7a69c1a96dc6831146ae
+vendor/lib64/libsdm-disp-vndapis.so|97cec0de20873798b35047452f06dd563fe7903c
+vendor/lib64/libsdmextension.so|a699449d83e87a0ef532f34bdf81972b38825a98
+vendor/lib64/libtestutils.so|0ae2f869ce1fae109a2f4a823cb07320aef1417d
+vendor/lib64/libtinyxml2_1.so|651b401158d565b0f23f6b1d0fec7a31dca346ad
+vendor/lib64/libvmfilexfer.so|43ae747164b6f46f11a971c044550adda765072d
 
 # Display firmware
-vendor/firmware/dcp.bin
-vendor/firmware/dpAP_full.mbn
-vendor/firmware/dpAP_mini.mbn
+vendor/firmware/dcp.bin|ccb1ed92cf13edb9a8b694f6cce986a506de9873
+vendor/firmware/dpAP_full.mbn|c6f46e269b47fba0c4b08cba458fec7b9b0be9eb
+vendor/firmware/dpAP_mini.mbn|47fd08559bcc3d4d26bc753ba43c8b8a24f4d570
 
 # Display postprocessing
-vendor/bin/hw/vendor.qti.hardware.display.color-service
-vendor/bin/ppd
-vendor/etc/init/vendor.qti.hardware.display.color-service.rc
-vendor/lib64/libdisp-aba.so
+vendor/bin/hw/vendor.qti.hardware.display.color-service|7892ffd696e71effed43d11c3daa5345d06915f1
+vendor/bin/ppd|5b97cfd47f0fe8c2db1954a82e1cb8c9230344ca
+vendor/etc/init/vendor.qti.hardware.display.color-service.rc|c9e7bd7964270453b14a5f64d5d08cab4b71a274
+vendor/lib64/libdisp-aba.so|d5639ba8cef216b8a408f2807c02b5b910dfbef2
 
 # DSP
 vendor/bin/dspservice
@@ -475,22 +477,22 @@ odm/etc/charge.cfg
 odm/lib64/libGaiaClient_vnd.so
 
 # OPLUS Display
-odm/bin/hw/vendor.oplus.hardware.displaypanelfeature-service
-odm/bin/cwb_utils_aidl
-odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc
-odm/etc/vintf/manifest/manifest_displaycolorfeature_aidl.xml
-odm/etc/vintf/manifest/manifest_oplus_cwb_aidl.xml
-odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
-odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml
-odm/lib64/libPanelChaplin.so
-odm/lib64/libdisplayaidlapis.so
-odm/lib64/libdisplayfossfeature_nature.so
-odm/lib64/libdpaservice.so
-odm/lib64/libstc_color_feature.so
-vendor/lib64/libPanelChaplin.so;MODULE_SUFFIX=_vendor
-vendor/lib64/libcwb_client_vendor.so
-vendor/lib64/libcwb_qcom_aidl.so
-vendor/lib64/libdtlm.so
+odm/bin/hw/vendor.oplus.hardware.displaypanelfeature-service|6da748348363ebdbb34d5c4b55798e9690aeaa70
+odm/bin/cwb_utils_aidl|2f6908c6f1cfb210a5e3f20088b4f987ca5bc8f0
+odm/etc/init/vendor.oplus.hardware.displaypanelfeature-service.rc|d725ada99b8cd1cded10612cd9fc273c739e5879
+odm/etc/vintf/manifest/manifest_displaycolorfeature_aidl.xml|b4b4101fe9430d33d74392e9b5abf10066dc3b65
+odm/etc/vintf/manifest/manifest_oplus_cwb_aidl.xml|72d4ee81309a90063a3365887f8b824142c124f7
+odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml|e92ed5cbd99725a6dc77b1015030e5c41bf34c0f
+odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml|95e0982d436a42177386231466faf99cdaa9d09e
+odm/lib64/libPanelChaplin.so|997833041918180dab0577fc83d27b85cabf81f1
+odm/lib64/libdisplayaidlapis.so|6134d9c2107695b633c928d5d471cf0fa01610df
+odm/lib64/libdisplayfossfeature_nature.so|e54c3f19ecc343f1231aa6a5bac7955a5f5baf7a|e54c3f19ecc343f1231aa6a5bac7955a5f5baf7a
+odm/lib64/libdpaservice.so|be1310a6c4694d389f00495ec5eea57b6edf8d3c
+odm/lib64/libstc_color_feature.so|8f4ae3173009eb00f9b7d30008de6a4535170ac0|8f4ae3173009eb00f9b7d30008de6a4535170ac0
+vendor/lib64/libPanelChaplin.so;MODULE_SUFFIX=_vendor|f653480c76bc8f5260fa75b501b702bba44b5837
+vendor/lib64/libcwb_client_vendor.so|e9726a165fe3232f7a10358fa6fe4edade53f70f
+vendor/lib64/libcwb_qcom_aidl.so|a2a6112e95b3d89e8373fbcefa72c191058e5bc0|a2a6112e95b3d89e8373fbcefa72c191058e5bc0
+vendor/lib64/libdtlm.so|1a6eed8c8fa3d88449c9879ce4dcb197be1e7ce0
 
 # OPLUS Log Core
 odm/bin/oldc_vnd
@@ -532,6 +534,7 @@ vendor/lib64/libqti-scenariod.so
 vendor/lib64/libqti-sslite.so
 vendor/lib64/libqti-util.so
 vendor/lib64/vendor.qti.hardware.perf2-V1-ndk.so
+vendor/lib64/vendor.qti.snapdragonServices-V1-ndk.so
 
 # Peripheral manager
 vendor/bin/pm-proxy
@@ -668,7 +671,6 @@ vendor/lib64/hw/vendor.qti.hardware.servicetrackeraidl-impl.so
 
 # QVIRT
 vendor/lib64/libVirtClientInterface.so
-vendor/lib64/libidv.so
 vendor/lib64/vendor.qti.qvirt-V2-ndk.so
 
 # SCVE
@@ -805,23 +807,14 @@ vendor/etc/sensors/config/oplus_camera_aon.json
 vendor/etc/sensors/config/qsh_ble.json
 vendor/etc/sensors/config/qsh_camera_common.json
 vendor/etc/sensors/config/qsh_camera_common_sm8845.json
-vendor/etc/sensors/config/qsh_camera_fairladyExfront_3.json
-vendor/etc/sensors/config/qsh_camera_fairladyfront_3.json
 vendor/etc/sensors/config/qsh_camera_imx688_6.json
 vendor/etc/sensors/config/qsh_camera_imx688_6_actuator.json
 vendor/etc/sensors/config/qsh_camera_infinitifront_4.json
 vendor/etc/sensors/config/qsh_camera_lafafront_4.json
-vendor/etc/sensors/config/qsh_camera_lighthousefront_1.json
-vendor/etc/sensors/config/qsh_camera_macanExFront_4.json
-vendor/etc/sensors/config/qsh_camera_macanFront_4.json
 vendor/etc/sensors/config/qsh_camera_ov32c4c_4.json
 vendor/etc/sensors/config/qsh_camera_ov32c4c_4_sm8845.json
 vendor/etc/sensors/config/qsh_camera_s5kjn5_3.json
 vendor/etc/sensors/config/qsh_camera_s5kjn5_3_actuator.json
-vendor/etc/sensors/config/qsh_camera_swangoosefrontmain_3.json
-vendor/etc/sensors/config/qsh_camera_swangoosefrontsub_4.json
-vendor/etc/sensors/config/qsh_camera_u9bfront_4.json
-vendor/etc/sensors/config/qsh_camera_u9front_4.json
 vendor/etc/sensors/config/sns_amd.json
 vendor/etc/sensors/config/sns_aont.json
 vendor/etc/sensors/config/sns_cm.json
@@ -890,7 +883,6 @@ vendor/etc/init/vendor.qti.tftp.rc
 # Thermal engine
 vendor/bin/thermal-engine-v2
 vendor/etc/init/init_thermal-engine-v2.rc
-vendor/lib64/libqpt.so
 vendor/lib64/libthermalclient.so
 
 # Time services
