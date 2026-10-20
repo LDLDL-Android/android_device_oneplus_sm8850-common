@@ -583,6 +583,16 @@ vendor/bin/pm-proxy
 vendor/bin/pm-service
 vendor/lib64/libperipheral_client.so
 
+# Power optimisation (camera)
+vendor/bin/poweropt-service
+vendor/etc/init/poweropt-service.rc
+vendor/etc/pwr/CameraPowerOptFeature.xml
+vendor/etc/pwr/PowerFeatureConfig.xml
+vendor/etc/vintf/manifest/vendor.qti.hardware.power.powermodule.xml
+vendor/lib64/libcamerapoweroptfeature.so
+vendor/lib64/libpowercore.so
+vendor/lib64/vendor.qti.hardware.power.powermodule-V1-ndk.so
+
 # Power-off alarm
 vendor/bin/hw/vendor.qti.hardware.alarm-service
 vendor/bin/power_off_alarm

@@ -58,7 +58,10 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/libdisplayfossfeature_nature.so',
         'odm/lib64/libstc_color_feature.so',
         'vendor/bin/hw/vendor.qti.hardware.display.composer-service',
+        'vendor/bin/poweropt-service',
         'vendor/lib64/hw/libaudioeffecthal.qti.so',
+        'vendor/lib64/libcamerapoweroptfeature.so',
+        'vendor/lib64/libpowercore.so',
         'vendor/lib64/libsdmclient.so',
     ): blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v36.so'),
@@ -95,6 +98,9 @@ blob_fixups: blob_fixups_user_type = {
         .replace_needed('libtensorflowlite_c.so', 'libtensorflowlite_c_qcom.so'),
     'vendor/etc/perf/perfboostsconfig.xml': blob_fixup()
         .regex_replace(r'Enable="false"', r'Enable="true"'),
+    # Only the camera feature; the others need the full QTI perf stack.
+    'vendor/etc/pwr/PowerFeatureConfig.xml': blob_fixup()
+        .regex_replace(r'(<Name>(?!CameraPowerOptFeature)\w+</Name>\s*<Enable>)1', r'\g<1>0'),
     'vendor/etc/sensors/hals.conf': blob_fixup()
         .regex_replace(r'sensors\.qsh\.so', 'sensors.fusionlight.so'),
     (
