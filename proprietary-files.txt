@@ -436,9 +436,11 @@ odm/etc/camera/media_profiles.xml:odm/etc/media_profiles_V1_0.xml;TRYSRCFIRST
 odm/lib64/libc2filterplugin.so
 odm/lib64/libdolbydecoderprocessor.so
 odm/lib64/libdolbyeglcore.so
+odm/lib64/libdolbyencoderprocessor.so
 odm/lib64/libdolbyottcameracontrol.so
 odm/lib64/libdolbyproxyandroid.so
 odm/lib64/libqcodec2_dolbydecoderfilter.so
+odm/lib64/libqcodec2_dolbyencoderfilter.so
 system_ext/lib64/libmmosal.so
 system_ext/lib64/libmmparser_lite.so
 vendor/bin/hw/qconfigservice
