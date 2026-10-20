@@ -284,6 +284,7 @@ on post-fs-data
     mkdir /data/vendor/camera_process 0777 camera camera
     restorecon_recursive /data/vendor/cam_alog
     restorecon_recursive /data/vendor/camera_process
+    restorecon_recursive /data/vendor/camera_remote_dump
 
     #Create directory for tftp
     mkdir /data/vendor/tombstones 0771 system system
