@@ -524,6 +524,7 @@ odm/etc/vintf/manifest/manifest_oplus_cwb_aidl.xml
 odm/etc/vintf/manifest/manifest_oplus_displaypanelfeature_aidl.xml
 odm/etc/vintf/manifest/vintf_manifext_aidl_panelchaplin.xml
 odm/lib64/libPanelChaplin.so
+odm/lib64/libdisplayadfr2minfps_qcom.so
 odm/lib64/libdisplayaidlapis.so
 odm/lib64/libdisplayfossfeature_nature.so
 odm/lib64/libdpaservice.so
