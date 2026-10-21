@@ -10,4 +10,7 @@
 
     <!-- Keep the adaptive panel mode active while dozing so ADFR can idle at 1 Hz. -->
     <integer name="config_keyguardMaxRefreshRate">-1</integer>
+
+    <!-- OPlus gauge reports battery current_now in mA, not uA. -->
+    <integer name="config_currentInfoDivider">1</integer>
 </resources>
